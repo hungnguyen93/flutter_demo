@@ -1,6 +1,6 @@
 class ApiException implements Exception {
   final String? message;
-  final String? status;
+  final bool? status;
 
   ApiException({
     this.message,

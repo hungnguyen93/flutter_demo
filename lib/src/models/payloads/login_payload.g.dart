@@ -7,8 +7,8 @@ part of 'login_payload.dart';
 // **************************************************************************
 
 LoginPayload _$LoginPayloadFromJson(Map<String, dynamic> json) => LoginPayload(
-      password: json['password'] as String?,
-      phone: json['phone'] as String?,
+      password: json['password'] as String,
+      phone: json['phone'] as String,
     );
 
 Map<String, dynamic> _$LoginPayloadToJson(LoginPayload instance) =>

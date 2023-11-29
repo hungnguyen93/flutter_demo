@@ -8,9 +8,8 @@ part 'api_response.g.dart';
 
 @JsonSerializable(genericArgumentFactories: true)
 class ApiResponse<T> {
-  
   final String? message;
-  final String status;
+  final bool status;
 
   @JsonKey(name: 'data', includeIfNull: false)
   final T? _data;
@@ -43,11 +42,11 @@ class ApiResponse<T> {
   }
 
   bool _success() {
-    return int.parse(status) == 0;
+    return status;
   }
 
   void _checkException() {
-    if (int.parse(status) != 0) {
+    if (!status) {
       throw ApiException(message: message!, status: status);
     }
   }
@@ -85,7 +84,7 @@ class ErrorInfo {
 
   factory ErrorInfo.fromJson(Map<String, dynamic> map) {
     return ErrorInfo(
-      map['status']?.toInt() ?? 0,
+      map['status'] ?? false,
       map['message'] ?? '',
     );
   }

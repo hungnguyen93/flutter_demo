@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:infinitie_list_app/src/core/models/responses/login_response.dart';
 import 'package:infinitie_list_app/src/core/networking/api_response.dart';
+import 'package:infinitie_list_app/src/models/responses/login_response.dart';
 import 'package:retrofit/http.dart';
 part 'login_api.g.dart';
 

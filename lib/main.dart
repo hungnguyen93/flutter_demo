@@ -6,15 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:infinitie_list_app/src/core/service/login_api.dart';
 
 void main() {
-  final dio = Dio();
-
-
-  final client = ApiClient(dio);
-  client
-      .getLogin('08408408408', '11111111')
-      .then((res) => {print(res)})
-      .catchError((onError) => {print(onError)});
-
   runApp(const MyApp());
 }
 

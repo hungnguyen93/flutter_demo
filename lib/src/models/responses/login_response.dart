@@ -1,5 +1,5 @@
-import 'package:infinitie_list_app/src/core/models/responses/token_response.dart';
-import 'package:infinitie_list_app/src/core/models/responses/user_response.dart';
+import 'package:infinitie_list_app/src/models/responses/token_response.dart';
+import 'package:infinitie_list_app/src/models/responses/user_response.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'login_response.g.dart';
