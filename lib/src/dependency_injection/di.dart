@@ -1,9 +1,13 @@
-import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
+import '../core/injection/injector_container.dart';
 
 import 'di.config.dart';
 
-final getIt = GetIt.instance;
-
-@InjectableInit()
-Future<void> configureDependencies() async => await $initGetIt(getIt);
+@InjectableInit(
+  initializerName: 'init',
+  preferRelativeImports: true,
+  asExtension: true,
+  externalPackageModulesBefore: [],
+  externalPackageModulesAfter: [],
+)
+Future<void> configureDependencies() async => injector.init();

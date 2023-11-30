@@ -1,9 +1,9 @@
+import 'package:dio/dio.dart';
 import 'package:infinitie_list_app/src/core/networking/api_response.dart';
 import 'package:infinitie_list_app/src/models/payloads/login_payload.dart';
 import 'package:infinitie_list_app/src/models/responses/login_response.dart';
-import 'package:retrofit/retrofit.dart';
-import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
+import 'package:retrofit/retrofit.dart';
 
 part 'auth_api.g.dart';
 
