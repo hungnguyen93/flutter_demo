@@ -13,10 +13,11 @@ class AuthApiConstants {
 
 @RestApi()
 @injectable
+@singleton
 abstract class AuthApi {
   @factoryMethod
   factory AuthApi(Dio dio) = _AuthApi;
 
   @POST(AuthApiConstants.login)
-  Future<ApiResponse<LoginResponse>> login(LoginPayload payload);
+  Future<ApiResponse<LoginResponse>> login(@Body() LoginPayload payload);
 }

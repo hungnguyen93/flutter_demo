@@ -3,7 +3,7 @@ import 'package:injectable/injectable.dart';
 
 @module
 abstract class DatasourceModule {
-  @prod
+  @singleton
   Dio dioProd() => Dio(
         BaseOptions(
           baseUrl:

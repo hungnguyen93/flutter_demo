@@ -13,5 +13,6 @@ abstract class ApiClient {
   factory ApiClient(Dio dio) = _ApiClient;
 
   @POST('/authentication/login')
-  Future<ApiResponse<LoginResponse>> getLogin(String phone, String password);
+  Future<ApiResponse<LoginResponse>> getLogin(
+      @Body() String phone, String password);
 }
